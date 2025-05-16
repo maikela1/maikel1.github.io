@@ -1,0 +1,128 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f5f2;
+    color: #4a4a4a;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .cafe-btn {
+    background-color: #6b4f3d;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .cafe-btn:hover {
+    background-color: #896a57;
+    transform: translateY(-2px);
+  }
+  
+  .cafe-btn-outline {
+    border: 2px solid #6b4f3d;
+    color: #6b4f3d;
+    transition: all 0.3s ease;
+  }
+  
+  .cafe-btn-outline:hover {
+    background-color: #6b4f3d;
+    color: white;
+  }
+  
+  .cafe-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .cafe-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-card {
+    border: 2px solid #e0e0e0;
+    transition: all 0.2s ease;
+  }
+  
+  .table-card:hover {
+    border-color: #6b4f3d;
+  }
+  
+  .table-card.selected {
+    border-color: #6b4f3d;
+    background-color: #f3ece6;
+  }
+  
+  .auth-container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Animation classes */
+  .fade-in {
+    animation: fadeIn 0.4s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Calendar styles */
+  .calendar-day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+  
+  .calendar-day:hover {
+    background-color: #f3ece6;
+  }
+  
+  .calendar-day.selected {
+    background-color: #6b4f3d;
+    color: white;
+  }
+  
+  .calendar-day.disabled {
+    color: #d1d1d1;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .calendar-container {
+      grid-template-columns: repeat(7, 1fr);
+    }
+    
+    .calendar-day {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  .time-slot {
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .time-slot:hover {
+    background-color: #f3ece6;
+  }
+  
+  .time-slot.selected {
+    background-color: #6b4f3d;
+    color: white;
+  }
+  
+  .time-slot.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
